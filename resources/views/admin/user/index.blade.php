@@ -12,7 +12,7 @@
     <div class="layui-card-body ">
         <form class="layui-form layui-col-space5" id="search-form">
             <div class="layui-inline layui-show-xs-block">
-                <input type="text" name="username"  placeholder="请输微信号" value="{{ request("wxid") }}" autocomplete="off" class="layui-input">
+                <input type="text" name="wxid"  placeholder="请输微信号" value="{{ request("wxid") }}" autocomplete="off" class="layui-input">
             </div>
             <div class="layui-inline layui-show-xs-block">
                 <input type="text" name="mobile"  placeholder="请输手机号" value="{{ request("mobile") }}" autocomplete="off" class="layui-input">
@@ -23,13 +23,6 @@
         </form>
     </div>
     <div class="layui-card-body ">
-        <script type="text/html" id="toolbar">
-            <div class="layui-btn-container">
-                @if(admin_user_can("user.create"))
-                    <a class="layui-btn layui-btn-sm" onclick="admin.openLayerForm('{{ route("user.create") }}', '添加', 'POST', '500px', '350px')"><i class="layui-icon"></i>添加</a>
-                @endif
-            </div>
-        </script>
         <table  lay-filter="table-hide" style="display: none" lay-data="{height:'full-310', cellMinWidth: 80,toolbar: '#toolbar', limit: {{ $list->perPage() }} }">
             <thead>
             <tr>
@@ -56,13 +49,13 @@
                     <td></td>
                     <td></td>
                     <td>{{ $item->status_name }}</td>
-                    <td></td>
+                    <td>{{ $item->is_deleted == 1 ? '已删除' : '未删除' }}</td>
                     <td></td>
                     <td>{{ $item->created_at }}</td>
                     <td>
                         @if(admin_user_can("user.edit"))
                             <a class="layui-btn layui-btn-xs"
-                                onclick="admin.openLayerForm('{{ route("user.edit", ['user' => $item->id]) }}', '编辑', 'PATCH', '500px', '350px')">编辑</a>
+                                onclick="admin.openLayerForm('{{ route("user.edit", ['user' => $item->id]) }}', '编辑', 'PATCH', '600px', '550px')">编辑</a>
                         @endif
                         @if(admin_user_can("user.destroy"))
                                 <a class="layui-btn layui-btn-xs layui-btn-danger"

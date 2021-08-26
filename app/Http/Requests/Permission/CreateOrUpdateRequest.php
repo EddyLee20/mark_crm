@@ -26,14 +26,12 @@ class CreateOrUpdateRequest extends FormRequest
      */
     public function rules()
     {
-        $rules = [
+        return [
             'name' => 'required|max:255',
             'guard_name' => 'required|max:255',
             'display_name' => 'required:max:50',
             'pg_id' => 'required|numeric',
             'sequence' => 'numeric'
         ];
-
-        return $rules;
     }
 }

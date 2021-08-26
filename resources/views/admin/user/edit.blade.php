@@ -2,67 +2,72 @@
     <form class="layui-form" method="post" action="{{ route("user.update", ['user' => $info->id]) }}" id="layer-form">
         @csrf
         <div class="layui-form-item">
-            <label class="layui-form-label">所属机器微信号</label>
+            <label class="layui-form-label">机器微信号</label>
             <div class="layui-input-block">
-                <input type="text" name="robot" required readonly value="{{ $info->robot }}" class="layui-input">
+                <input type="text" name="robot" disabled value="{{ $info->robot }}" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">微信号</label>
             <div class="layui-input-block">
-                <input type="text" name="wxid" required readonly value="{{ $info->wxid }}" class="layui-input">
+                <input type="text" name="wxid" disabled value="{{ $info->wxid }}" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">微信号</label>
+            <label class="layui-form-label">微信昵称</label>
             <div class="layui-input-block">
-                <input type="text" name="nickname" required readonly value="{{ $info->nickname }}" class="layui-input">
+                <input type="text" name="nickname" disabled value="{{ $info->nickname }}" class="layui-input">
             </div>
         </div>
-{{--        <div class="layui-form-item">--}}
-{{--            <label class="layui-form-label">上级菜单ID</label>--}}
-{{--            <div class="layui-input-block">--}}
-{{--                <input type="text" name="parent_id" required value="{{ $navigation->parent_id }}"  lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="layui-form-item">--}}
-{{--            <label class="layui-form-label">URI</label>--}}
-{{--            <div class="layui-input-block">--}}
-{{--                <input type="text" name="uri" required value="{{ $navigation->uri }}"  lay-verify="required" placeholder="请输入导航链接" autocomplete="off" class="layui-input">--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="layui-form-item">--}}
-{{--            <label class="layui-form-label">Guard</label>--}}
-{{--            <div class="layui-input-block">--}}
-{{--                <select name="guard_name" lay-verify="required">--}}
-{{--                    <option value=""></option>--}}
-{{--                    {!! admin_enum_option_string("guard_names", $navigation->guard_name) !!}--}}
-{{--                </select>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="layui-form-item">--}}
-{{--            <label class="layui-form-label">导航类型</label>--}}
-{{--            <div class="layui-input-block">--}}
-{{--                <input type="text" name="type" required value="{{ $navigation->type }}"  lay-verify="required" placeholder="请输入导航类型" autocomplete="off" class="layui-input">--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="layui-form-item">--}}
-{{--            <label class="layui-form-label">关联权限</label>--}}
-{{--            <div class="layui-input-block">--}}
-{{--                <input type="text" name="permission_name" required value="{{ $navigation->permission_name }}"  lay-verify="required" placeholder="请输入关联权限" autocomplete="off" class="layui-input">--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="layui-form-item">--}}
-{{--            <label class="layui-form-label">icon</label>--}}
-{{--            <div class="layui-input-block">--}}
-{{--                <input type="text" name="icon" required value="{{ $navigation->icon }}"  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="layui-form-item">--}}
-{{--            <label class="layui-form-label">排序</label>--}}
-{{--            <div class="layui-input-block">--}}
-{{--                <input type="text" name="sequence" required value="{{ $navigation->sequence }}"  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">--}}
-{{--            </div>--}}
-{{--        </div>--}}
+        <div class="layui-form-item">
+            <label class="layui-form-label">手机号</label>
+            <div class="layui-input-block">
+                <input type="text" name="mobile" value="{{ $info->mobile }}" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">真实姓名</label>
+            <div class="layui-input-block">
+                <input type="text" name="realname" value="{{ $info->realname }}" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">性别</label>
+            <div class="layui-input-block">
+                <input type="radio" name="gender" value="1" title="男" {{ $info->gender == 1 ? "checked" : '' }}>
+                <input type="radio" name="gender" value="2" title="女" {{ $info->gender == 2 ? "checked" : '' }}>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属帐号</label>
+            <div class="layui-input-block">
+                <select name="group_id" lay-verify="required">
+                    <option value="0" selected>未分配客服</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">状态</label>
+            <div class="layui-input-block">
+                <select name="city" lay-verify="required">
+                    @foreach ($status as $k=>$v)
+                        <option value="{{ $k }}" {{ $info->status == $k ? "selected" : ''}}>{{ $v }}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">被删除状态</label>
+            <div class="layui-input-block">
+                <input type="radio" name="is_deleted" value="0" title="未删除" {{ $info->gender == 0 ? "checked" : '' }}>
+                <input type="radio" name="is_deleted" value="1" title="已删除" {{ $info->gender == 1 ? "checked" : '' }}>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">备注</label>
+            <div class="layui-input-block">
+                <textarea name="remark" placeholder="请输入内容" class="layui-textarea">{{ $info->remark }}</textarea>
+            </div>
+        </div>
     </form>
 </div>

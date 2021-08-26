@@ -3,17 +3,24 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Constant\UserConstant;
-use App\Http\Controllers\Controller;
+use App\Http\Requests\Validate\UserRequest;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class UserController extends AdminController
 {
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index(Request $request)
     {
         $userStatus = UserConstant::USER_STATUS;
-        $list = User::query()->where(request_intersect(['wxid', 'mobile']))->paginate($request->get("limit"));
+        $map = request_intersect(['wxid', 'mobile']);
+        array_push($map, ['status','>=', 0]);
+
+        $list = User::query()->where($map)->paginate($request->get("limit"));
         foreach ($list as $item){
             $item->status_name = $userStatus[$item->status];
         }
@@ -22,42 +29,40 @@ class UserController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
         $info = User::find($id);
-        return view("admin.user.edit", compact('info'));
+        $status = UserConstant::USER_STATUS;
+        return view("admin.user.edit", compact('info', 'status'));
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param UserRequest $request
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function update(Request $request, $id)
+    public function update(UserRequest $request, $id)
     {
-        //
+        $info = User::query()->findOrFail($id);
+
+        $info->update($request->toArray());
+
+        return $this->success();
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
      */
     public function destroy($id)
     {
-        //
+        $info = User::query()->findOrFail($id);
+
+        $info->update(['status'=>-1]);
+
+        return $this->success();
     }
 }

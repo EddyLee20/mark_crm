@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b672635-6d60-4aa5-ae94-5514ddd8bc85" name="默认更改列表" comment="" />
+    <list default="true" id="0b672635-6d60-4aa5-ae94-5514ddd8bc85" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Permission/CreateOrUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Permission/CreateOrUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PermissionGroup/CreateOrUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PermissionGroup/CreateOrUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Role/CreateOrUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Role/CreateOrUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Validate/UserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Validate/UserRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,22 +186,33 @@
       <option name="presentableId" value="Default" />
       <updated>1629362506169</updated>
       <workItem from="1629362507395" duration="9974000" />
-      <workItem from="1629679480542" duration="82459000" />
+      <workItem from="1629679480542" duration="89993000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="615" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1629958989466">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
     <state x="615" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1629958989466" />
-    <state x="828" y="352" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1629961884718">
+    <state x="828" y="352" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1629970486201">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="828" y="352" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1629961884718" />
+    <state x="828" y="352" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1629970486201" />
     <state x="878" y="352" key="FileChooserDialogImpl" timestamp="1629874198087">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
@@ -202,9 +233,9 @@
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
     <state x="754" y="279" key="run.anything.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1629949539660" />
-    <state x="760" y="264" width="672" height="678" key="search.everywhere.popup" timestamp="1629949999464">
+    <state x="760" y="264" width="672" height="678" key="search.everywhere.popup" timestamp="1629972279850">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="760" y="264" width="672" height="678" key="search.everywhere.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1629949999464" />
+    <state x="760" y="264" width="672" height="678" key="search.everywhere.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1629972279850" />
   </component>
 </project>
