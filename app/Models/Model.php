@@ -7,5 +7,6 @@ use \Illuminate\Database\Eloquent\Model as EloquentModel;
 
 class Model extends EloquentModel
 {
-    //TODO
+    const CREATED_AT = 'create_time';
+    const UPDATED_AT = 'update_time';
 }

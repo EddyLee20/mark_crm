@@ -3,22 +3,23 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
-class UserAllotTask extends Command
+class UserSchedule extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'task:user_allot';
+    protected $signature = 'task:user';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'task user_allot';
+    protected $description = 'Task User';
 
     /**
      * Create a new command instance.
@@ -33,10 +34,11 @@ class UserAllotTask extends Command
     /**
      * Execute the console command.
      *
-     * @return int
+     * @return mixed
      */
     public function handle()
     {
-        return 0;
+        Log::info('123');
+        return 1;
     }
 }

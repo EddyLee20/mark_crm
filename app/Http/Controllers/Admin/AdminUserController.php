@@ -21,7 +21,7 @@ class AdminUserController extends AdminController
      */
     public function index(Request $request)
     {
-        $adminUsers = AdminUser::query()->where(request_intersect(['username', 'mobile']))->paginate($request->get("limit"));
+        $adminUsers = AdminUser::query()->where(request_intersect(['username', 'phone']))->paginate($request->get("limit"));
 
         return view("admin.admin_user.index", compact('adminUsers'));
     }
@@ -41,7 +41,7 @@ class AdminUserController extends AdminController
     public function store(CreateOrUpdateRequest $request)
     {
         $data = $request->only([
-            'username', 'mobile', 'nickname', 'password', 'status', 'group_id', 'intro'
+            'username', 'phone', 'nickname', 'password', 'status', 'group_id', 'intro'
         ]);
         $data['password'] = bcrypt($data['password']);
         $data['aid'] = Auth::id();
@@ -69,7 +69,7 @@ class AdminUserController extends AdminController
     public function update(CreateOrUpdateRequest $request, AdminUser $adminUser)
     {
         $data = $request->only([
-            'username', 'mobile', 'nickname', 'password', 'status', 'group_id', 'intro'
+            'username', 'phone', 'nickname', 'password', 'status', 'group_id', 'intro'
         ]);
 
         if ($request->filled('password')) {

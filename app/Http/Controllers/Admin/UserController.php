@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Constant\UserConstant;
 use App\Http\Requests\Validate\UserRequest;
 use App\Models\User\User;
+use App\Service\OutApi\YaotiService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Redis;
 
 class UserController extends AdminController
 {
@@ -17,7 +20,7 @@ class UserController extends AdminController
     public function index(Request $request)
     {
         $userStatus = UserConstant::USER_STATUS;
-        $map = request_intersect(['wxid', 'mobile']);
+        $map = request_intersect(['wxid', 'phone']);
         array_push($map, ['status','>=', 0]);
 
         $list = User::query()->where($map)->paginate($request->get("limit"));

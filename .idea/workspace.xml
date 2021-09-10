@@ -11,15 +11,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b672635-6d60-4aa5-ae94-5514ddd8bc85" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/app/CacheKey/SystemCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Constant/SysConstant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Wx/WxGroup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Wx/WxRobot.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Service/OutApi/YaotiService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mark_crm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mark_crm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/UserAllotTask.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminUserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Permission/CreateOrUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Permission/CreateOrUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PermissionGroup/CreateOrUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PermissionGroup/CreateOrUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Role/CreateOrUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Role/CreateOrUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AdminUser/CreateOrUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AdminUser/CreateOrUpdateRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/Validate/UserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Validate/UserRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Admin/AdminUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/AdminUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Admin/PermissionGroup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin/PermissionGroup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,6 +157,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/predis/predis" />
     </include_path>
   </component>
   <component name="ProjectId" id="1wwH0MqVHQbOIKx0SG0xLwniykv" />
@@ -154,18 +170,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Project\laravel\mark_crm\resources\views\Admin" />
-      <recent name="E:\Project\laravel\mark_crm\app\Http\Controllers\Admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Project\laravel\mark_crm\app\Models\Wx" />
       <recent name="E:\Project\laravel\mark_crm\resources\views\admin\user" />
       <recent name="E:\Project\laravel\mark_crm\app\Models\Admin" />
       <recent name="E:\Project\laravel\mark_crm\routes" />
       <recent name="E:\Project\laravel\mark_crm\app\Http\Controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Project\laravel\mark_crm\resources\views\Admin" />
       <recent name="E:\Project\laravel\mark_crm\app\Http\Controllers\Admin" />
     </key>
   </component>
@@ -186,8 +203,27 @@
       <option name="presentableId" value="Default" />
       <updated>1629362506169</updated>
       <workItem from="1629362507395" duration="9974000" />
-      <workItem from="1629679480542" duration="89993000" />
+      <workItem from="1629679480542" duration="95137000" />
+      <workItem from="1630035735805" duration="35155000" />
+      <workItem from="1630284424608" duration="1763000" />
+      <workItem from="1630286859888" duration="8621000" />
+      <workItem from="1631153729240" duration="7098000" />
     </task>
+    <task id="LOCAL-00001" summary="开发">
+      <created>1629972906498</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629972906498</updated>
+    </task>
+    <task id="LOCAL-00002" summary="开发">
+      <created>1629972987778</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629972987778</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,39 +239,52 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="开发" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="615" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1629958989466">
+    <state x="615" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1630656855951">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="615" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1629958989466" />
-    <state x="828" y="352" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1629970486201">
+    <state x="615" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1630656855951" />
+    <state x="828" y="352" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1630659306074">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="828" y="352" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1629970486201" />
-    <state x="878" y="352" key="FileChooserDialogImpl" timestamp="1629874198087">
+    <state x="828" y="352" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1630659306074" />
+    <state x="878" y="352" key="FileChooserDialogImpl" timestamp="1630304987203">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="878" y="352" key="FileChooserDialogImpl/0.0.2194.1194@0.0.2194.1194" timestamp="1629874198086" />
-    <state x="817" y="318" key="NewPhpClassDialog" timestamp="1629950239010">
+    <state x="878" y="352" key="FileChooserDialogImpl/0.0.2194.1194@0.0.2194.1194" timestamp="1630304987203" />
+    <state x="817" y="318" key="NewPhpClassDialog" timestamp="1630658990385">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="817" y="318" key="NewPhpClassDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1629950239010" />
+    <state x="817" y="318" key="NewPhpClassDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1630658990385" />
     <state x="914" y="520" key="NewPhpFileDialog" timestamp="1629885109004">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
     <state x="914" y="520" key="NewPhpFileDialog/0.0.2194.1194@0.0.2194.1194" timestamp="1629885109004" />
-    <state x="800" y="331" width="593" height="584" key="find.popup" timestamp="1629943153531">
+    <state x="690" y="330" key="Vcs.Push.Dialog.v2" timestamp="1629972913283">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="800" y="331" width="593" height="584" key="find.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1629943153531" />
-    <state x="754" y="279" key="run.anything.popup" timestamp="1629949539660">
+    <state x="690" y="330" key="Vcs.Push.Dialog.v2/0.0.2194.1194@0.0.2194.1194" timestamp="1629972913283" />
+    <state x="93" y="93" width="2008" height="1008" key="dock-window-1" timestamp="1630115772908">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="754" y="279" key="run.anything.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1629949539660" />
-    <state x="760" y="264" width="672" height="678" key="search.everywhere.popup" timestamp="1629972279850">
+    <state x="93" y="93" width="2008" height="1008" key="dock-window-1/0.0.2194.1194@0.0.2194.1194" timestamp="1630115772908" />
+    <state x="800" y="331" width="593" height="584" key="find.popup" timestamp="1631259053555">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="760" y="264" width="672" height="678" key="search.everywhere.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1629972279850" />
+    <state x="800" y="331" width="593" height="584" key="find.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1631259053555" />
+    <state x="754" y="279" key="run.anything.popup" timestamp="1630122088332">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="754" y="279" key="run.anything.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1630122088332" />
+    <state x="760" y="264" width="672" height="678" key="search.everywhere.popup" timestamp="1630141511358">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="760" y="264" width="672" height="678" key="search.everywhere.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1630141511358" />
   </component>
 </project>

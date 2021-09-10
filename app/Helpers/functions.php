@@ -86,3 +86,34 @@ function type_option_string($field, $default = null)
     }
     return $options;
 }
+
+//获取当前环境
+function cur_env(): string
+{
+    return env('APP_ENV', 'dev');
+}
+
+//是否开发环境
+function is_dev(): bool
+{
+    return env('APP_ENV', 'dev') == 'dev';
+}
+
+//是否生产环境
+function is_production(): bool
+{
+    return env('APP_ENV', 'dev') == 'production';
+}
+
+//被动缓存
+function cache_remember(string $key, callable $callback, int $ttl = 3600, array $params = [], bool $cache = true)
+{
+//    if (is_dev()) {
+//        $cache = false;
+//    }
+    if ($cache && !is_null($data = \Illuminate\Support\Facades\Cache::get($key))) {
+        return $data === false ? null : $data;
+    } else {
+        return \Illuminate\Support\Facades\Cache::remember($key, $ttl, $callback);
+    }
+}

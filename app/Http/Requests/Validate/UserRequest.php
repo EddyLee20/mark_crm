@@ -17,7 +17,7 @@ class UserRequest extends FormRequest
     {
         return [
             'realname' => 'required|max:255',
-            'mobile' => 'required|alpha_num|max:11',
+            'phone' => 'required|alpha_num|max:11',
             'group_id' => 'required|alpha_num|max:11',
             'remark' => 'required|max:255',
             'gender' => 'required|in:0,1',

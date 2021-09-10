@@ -27,7 +27,7 @@ class CreateOrUpdateRequest extends FormRequest
     {
         $rules = [
             'nickname' => 'required|max:255',
-            'mobile' => 'required|alpha_num|max:11',
+            'phone' => 'required|alpha_num|max:11',
             'group_id' => 'required|alpha_num|max:11',
             'intro' => 'required|max:255',
         ];

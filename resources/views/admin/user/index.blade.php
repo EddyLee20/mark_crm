@@ -35,7 +35,7 @@
                 <th lay-data="{field:'status'}">状态</th>
                 <th lay-data="{field:'is_deleted'}">被删除状态</th>
                 <th lay-data="{field:'remark'}">备注</th>
-                <th lay-data="{field:'created_at'}">创建时间</th>
+                <th lay-data="{field:'create_time'}">创建时间</th>
                 <th lay-data="{field:'modify', fixed: 'right', width:200, align:'center'}">操作</th>
             </tr>
             </thead>
@@ -51,7 +51,7 @@
                     <td>{{ $item->status_name }}</td>
                     <td>{{ $item->is_deleted == 1 ? '已删除' : '未删除' }}</td>
                     <td></td>
-                    <td>{{ $item->created_at }}</td>
+                    <td>{{ $item->create_time }}</td>
                     <td>
                         @if(admin_user_can("user.edit"))
                             <a class="layui-btn layui-btn-xs"
