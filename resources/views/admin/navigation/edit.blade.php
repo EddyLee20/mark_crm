@@ -43,7 +43,12 @@
         <div class="layui-form-item">
             <label class="layui-form-label">icon</label>
             <div class="layui-input-block">
-                <input type="text" name="icon" required value="{{ $navigation->icon }}"  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                <select name="icon" lay-verify="required">
+                    <option value="">无图标</option>
+                    @foreach ($nav_icon as $k=>$v)
+                        <option value="{{ $k }}" {{ $navigation->icon == $k ? "selected" : ''}}>{{ $v }}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="layui-form-item">

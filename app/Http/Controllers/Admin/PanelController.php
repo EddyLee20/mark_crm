@@ -7,7 +7,7 @@ use App\Http\Requests\Validate\UserRequest;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 
-class UserController extends AdminController
+class PanelController extends AdminController
 {
     /**
      * @param Request $request

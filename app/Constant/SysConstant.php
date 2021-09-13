@@ -24,4 +24,18 @@ class SysConstant
         10 => '注册情况',
     ];
 
+    //后台图标
+    const NAV_ICON = [
+        'layui-icon-group' => '群组',
+        'layui-icon-app' => '应用',
+        'layui-icon-cols' => '纵列',
+        'layui-icon-home' => '主页',
+        'layui-icon-console' => '控制台',
+        'layui-icon-cart' => '购物车',
+        'layui-icon-component' => '组件',
+        'layui-icon-set-fill' => '设置-实心',
+        'layui-icon-find-fill' => '发现-实心',
+        'layui-icon-chart-screen' => '图标-报表',
+        'layui-icon-release' => '发布-纸飞机',
+    ];
 }

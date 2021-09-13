@@ -27,6 +27,8 @@ Route::group(['namespace' => '\App\Http\Controllers\Admin', 'middleware' => ['we
 
         //内容管理
         Route::resource('/content/user', 'UserController');
+        Route::resource('/content/panel', 'PanelController');
+
     });
 });
 

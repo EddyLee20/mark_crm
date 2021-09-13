@@ -2,32 +2,41 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Constant\SysConstant;
 use App\Http\Requests\Navigation\CreateOrUpdateRequest;
 use App\Models\Admin\Navigation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 class NavigationController extends AdminController
 {
 
-    public function index(Request $request)
+    public function index()
     {
         $where = request_intersect(['type', 'guard_name']);
         if (!isset($where['guard_name']) || !$where['guard_name']) {
             $where['guard_name'] = 'admin';
         }
+        $nav_types = Arr::pluck(config('admin.nav_types'), 'name', 'key');
 
-        $navigation = Navigation::query()
+        $navigateArr = Navigation::query()
             ->where($where)
-            ->orderBy('sequence', 'desc')
+            ->orderBy('sequence')
             ->get()
-            ->toJson();
+            ->toArray();
+        $navigateArr = array_map(function ($item) use ($nav_types){
+            $item['type_name'] = $nav_types[$item['type']] ?? '';
+            return $item;
+        }, $navigateArr);
+        $navigation = json_encode($navigateArr);
 
         return view("admin.navigation.index", compact("navigation"));
     }
 
     public function create()
     {
-        return view("admin.navigation.create");
+        $nav_icon = SysConstant::NAV_ICON;
+        return view("admin.navigation.create", compact('nav_icon'));
     }
 
     public function store(CreateOrUpdateRequest $request)
@@ -39,7 +48,8 @@ class NavigationController extends AdminController
 
     public function edit(Navigation $navigation)
     {
-        return view("admin.navigation.edit", compact("navigation"));
+        $nav_icon = SysConstant::NAV_ICON;
+        return view("admin.navigation.edit", compact("navigation", 'nav_icon'));
     }
 
     /**

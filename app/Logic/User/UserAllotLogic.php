@@ -4,27 +4,31 @@
 namespace App\Logic\User;
 
 
+use App\Models\Order\BzOrder;
 use App\Models\User\User;
+use App\Models\User\userAllotLog;
 use App\Models\Wx\WxMessage;
 use Illuminate\Support\Facades\Log;
 
 class UserAllotLogic
 {
-    public static function allotUser(int $userId, int $groupId): bool
+    public static function allotUser(int $userId, int $newGroupId, int $oldGroupId=0, string $action=''): bool
     {
         try {
             //修改用户归属
-            User::query()->where('id', $userId)->update(['group_id' => $groupId, 'assign_time' => time()]);
+            User::query()->where('id', $userId)->update(['group_id' => $newGroupId, 'assign_time' => time()]);
             // 修改消息的归属
-            WxMessage::query()->where([
+            $map = [
                 ['user_id', '=', $userId],
                 ['group_id', '=', 0],
-            ])->update(['group_id'=>$groupId]);
+            ];
+            WxMessage::query()->where($map)->update(['group_id'=>$newGroupId]);
             // 修改订单的归属
+            BzOrder::query()->where($map)->update(['group_id'=>$newGroupId]);
+            //记录分配日志
+            userAllotLog::addLog($oldGroupId, $newGroupId, $userId, $action);
 
-                //            $this->get_repository('WxMessage')->update_groupid_by_userid($v['id'], $groupId);
-//
-//            $this->get_repository('BzOrder')->update_groupid_by_umuid($v['id'], $groupId, true);
+            return true;
         } catch (\Exception $e){
             Log::channel('error')->info($e->getMessage());
             return false;

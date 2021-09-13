@@ -7,7 +7,6 @@ namespace App\Service\OutApi;
 use App\CacheKey\SystemCache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
-use PHPUnit\Exception;
 
 class YaotiService
 {

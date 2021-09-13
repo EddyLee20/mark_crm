@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Task\UserAllot;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
 
@@ -38,7 +39,9 @@ class UserSchedule extends Command
      */
     public function handle()
     {
-        Log::info('123');
-        return 1;
+        $userAllot = new UserAllot();
+        //新接口用户分配
+        $userAllot->averageAllotByFivePolt();
+        return true;
     }
 }

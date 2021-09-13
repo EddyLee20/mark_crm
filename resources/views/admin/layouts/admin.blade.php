@@ -39,10 +39,15 @@
                 @foreach($navigation as $topNav)
                     @if(isset($topNav['children']) && $topNav['children'])
                         <li class="layui-nav-item">
-                            <a class="" href="javascript:;">{{ $topNav['name'] }}</a>
+                            <a class="" href="javascript:;">
+                                <i class="layui-icon {{ $topNav['icon'] }}" style="font-size: 18px;"></i>
+                                <span>{{ $topNav['name'] }}</span>
+                            </a>
                             <dl class="layui-nav-child">
                                 @foreach ($topNav['children'] as $children)
-                                    <dd class="{{ request()->path() == trim($children['uri'], '/') ? 'layui-this' : '' }}"><a href="{{ $children['uri']  }}">{{ $children['name'] }}</a></dd>
+                                    <dd class="{{ request()->path() == trim($children['uri'], '/') ? 'layui-this' : '' }}">
+                                        <a href="{{ $children['uri']  }}">{{ $children['name'] }}</a>
+                                    </dd>
                                 @endforeach
                             </dl>
                         </li>

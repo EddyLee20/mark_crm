@@ -19,7 +19,7 @@ trait NavigationTree
         $items = Navigation::query()
             ->where('guard_name', $guardName)
             ->where("type", $type)
-            ->orderBy('sequence', 'desc')
+            ->orderBy('sequence')
             ->get()
             ->filter(function ($item) use ($userPermissions) {
                 return !$item->permission_name || $userPermissions->contains($item->permission_name);

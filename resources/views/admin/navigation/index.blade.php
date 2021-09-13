@@ -85,8 +85,8 @@
               }
             },
             {
-              key: 'type',
-              title: '菜单类型代码',
+              key: 'type_name',
+              title: '菜单分类',
               align: 'center',
             },
             {
